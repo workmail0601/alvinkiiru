@@ -1,0 +1,339 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Persistent Header */
+.persistent-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    z-index: 1100;
+}
+
+/* Home Link (Alvin Kiiru) */
+.home-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.home-link:hover {
+    color: orange;
+}
+
+/* === General Nav Styles === */
+.navbar {
+    z-index: 1000;   
+    position: fixed;
+    top: 20px;
+    right: 50px;
+    z-index: 1000}
+
+/* Nav Links - Hover & Click Effects */
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.2s, font-weight 0.2s;
+    display: block;
+    position: relative;
+    z-index: 1100;
+    
+}
+
+/* Hover Effect */
+.nav-links a:hover {
+    color: orange;
+    font-weight: bold;
+}
+
+/* Active/Click Effect */
+.nav-links a:active {
+    color: red;
+    font-weight: bold;
+}
+
+/* === Mobile Menu Button === */
+.menu-btn, .close-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    z-index: 1100;
+    margin-top: -10px;
+}
+
+/* === Mobile Nav Links === */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1300px) {
+    /* Show Hamburger */
+    .menu-btn {
+        display: block;
+    }
+
+    /* Hide Nav Links Initially */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        color: black;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        animation: slideIn 0.3s ease-out;
+    }
+
+    /* Show Nav Links on Active */
+    .nav-links.show {
+        display: flex;
+    }
+
+    /* Close Button - Visible Only When Menu is Open */
+    .close-btn {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: white;
+    }
+
+    /* Link Styles */
+    .nav-links a {
+        text-decoration: none;
+        color: white;
+        font-size: 2rem;
+        margin: 15px 0;
+        display: block;
+    }
+}
+
+/* === Slide In Animation === */
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Hidden Navbar */
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+/* Fullscreen Header */
+.header {
+    position: relative;
+    width: 80%;
+    height: 100vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+/* Opacity Layer */
+.opacity-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Centered Text */
+.header-content {
+    z-index: 2;
+}
+
+.header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.header h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer Styling */
+.footer {
+    background: black;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+  }
+  
+/* Container */
+.footer-container {
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+max-width: 1700px;
+margin: 0 auto;
+width: 100%;
+padding: 0 10px;
+gap: 20px;
+}
+
+/* Links and Social Media Sections */
+.footer-links {
+flex: 1;
+text-align: left;
+}
+
+.footer-social {
+flex: 1;
+text-align: right;
+}
+
+/* Divider */
+.footer-divider {
+width: 1px;
+background: #fff;
+display: block;
+}
+
+/* Footer Headings */
+.footer h3 {
+margin-bottom: 10px;
+font-size: 1.2rem;
+}
+
+/* Footer Lists */
+.footer ul {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.footer li {
+margin-bottom: 8px;
+}
+
+/* Footer Links */
+.footer a {
+color: #fff;
+text-decoration: none;
+transition: color 0.2s ease;
+}
+
+.footer a:hover {
+color: #f48fb1;
+}
+
+/* Back to Top Button */
+.back-to-top {
+position: fixed;
+bottom: 20px;
+right: 20px;
+background: #f48fb1;
+color: white;
+border: none;
+border-radius: 50%;
+width: 40px;
+height: 40px;
+font-size: 24px;
+cursor: pointer;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+transition: background 0.2s;
+display: none;
+}
+
+.back-to-top:hover {
+background: #ff4081;
+}
+
+
+
+/* Scroll Down Button */
+.scroll-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    animation: bounce 1.5s infinite;
+    cursor: pointer;
+}
+
+/* Scroll Animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(-50%);
+    }
+    40% {
+        transform: translateY(-10px) translateX(-50%);
+    }
+    60% {
+        transform: translateY(-5px) translateX(-50%);
+    }
+}
+
+.carousel-slide img {
+    max-height: 200px;
+}
+

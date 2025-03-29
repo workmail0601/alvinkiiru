@@ -1,0 +1,679 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+ /*smooth scroll*/
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fullscreen Header */
+.header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('images/back.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed; /* Parallax effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+/* Opacity Layer */
+.opacity-layer {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Centered Text */
+.header-content {
+    z-index: 2;
+}
+
+.header h1 {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.header h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+/* === General Nav Styles === */
+.navbar {
+    position: fixed;
+    top: 20px;
+    right: 50px;
+    z-index: 1000;
+  }
+
+/* === Nav Links - Hover & Click Effects === */
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    transition: color 0.2s, font-weight 0.2s;
+    display: block;
+    position: relative;
+    z-index: 1100;
+  }
+  
+/* Hover Effect */
+.nav-links a:hover {
+color: orange; /* Change color on hover */
+font-weight: bold; /* Make text heavier */
+}
+
+/* Active/Click Effect */
+.nav-links a:active {
+color: red; /* Optional: Change color on click */
+font-weight: bold;
+}  
+
+
+/* === Mobile Menu Button === */
+.menu-btn, .close-btn {
+display: none;
+background: none;
+border: none;
+font-size: 2rem;
+cursor: pointer;
+color: white;
+z-index: 1100;
+}
+
+/* === Mobile Nav Links === */
+.nav-links {
+list-style: none;
+display: flex;
+gap: 1rem;
+}
+
+/* Hidden Navbar */
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+/* === Mobile Menu Styles === */
+@media (max-width: 768px) {
+/* Show Hamburger */
+.menu-btn {
+    display: block;
+}
+
+/* Hide Nav Links Initially */
+.nav-links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: slideIn 0.3s ease-out;
+}
+
+/* Show Nav Links on Active */
+.nav-links.show {
+    display: flex;
+}
+
+/* Close Button - Visible Only When Menu is Open */
+.close-btn {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+}
+
+/* Link Styles */
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+    margin: 15px 0;
+}
+}
+
+/* === Slide In Animation === */
+@keyframes slideIn {
+from {
+    transform: translateY(-100%);
+}
+to {
+    transform: translateY(0);
+}
+}
+  
+/* Nav Links - Hover Effect */
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: transform 0.2s, color 0.2s;
+}
+
+
+/* Mouse Icon
+    * =================================================================== */
+    .mouse-icon {
+    border: 2px solid #fff;
+    border-radius: 16px;
+    display: block;
+    height: 50px;
+    margin: 180px auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 30px;
+    z-index: 10;
+}
+.mouse-icon .scroll {
+    animation-delay: 0s;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-name: scrolling;
+    animation-play-state: running;
+    animation-timing-function: linear;
+}
+.mouse-icon .scroll {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 10px;
+    height: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 4px;
+    width: 4px;
+}
+@keyframes scrolling {
+0% {
+    opacity: 0;
+    top: 5px;
+}
+30% {
+    opacity: 1;
+    top: 10px;
+}
+100% {
+    opacity: 0;
+    top: 25px;
+}
+}
+
+.pad-xl {
+    padding: 200px 0px;
+}
+
+.pad-lg {
+    padding: 160px 0px;
+}
+
+.pad-sm {
+    padding: 80px 0px;
+}
+
+.pad-xs {
+    padding: 30px 0px;
+}
+
+
+
+
+
+
+
+/* About Me Section */
+.about-me {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.about-me p {
+    max-width: 1400px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    padding-top: 10px;
+}
+/* Carousel */
+.carousel {
+    overflow: hidden;
+    position: relative;
+    max-width: 1680px;
+    margin: 30px auto;
+}
+
+/* Carousel Container */
+.carousel-container {
+    display: flex;
+    transition: transform 0.8s ease;
+    will-change: transform;
+}
+
+/* Each Slide */
+.carousel-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Image Styling */
+.carousel-slide img {
+    width: 100%;
+    max-height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Text Below Images */
+.carousel-text {
+    margin-top: 15px;
+}
+
+/* Title Link */
+.carousel-title {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.carousel-title:hover {
+    color: orange;
+}
+
+/* Responsive Design for About Me */
+@media (min-width: 768px) {
+    .carousel-slide {
+        flex: 0 0 50%; /* 2 items on medium screens */
+    }
+}
+
+@media (min-width: 1024px) {
+    .carousel-slide {
+        flex: 0 0 33.33%; /* 3 items on large screens */
+    }
+}
+
+@media (min-width: 1400px) {
+    .carousel-slide {
+        flex: 0 0 20%; /* 5 items on extra-large screens */
+    }
+}
+
+/* Carousel Container */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    max-width: 1400px;
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+}
+
+/* Arrows */
+.carousel-arrow {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding-bottom: 75px;
+    z-index: 10;
+    transition: color 0.2s ease;
+}
+
+.carousel-arrow:hover {
+    color: orange;
+}
+
+/* Position Arrows */
+.carousel-arrow.left {
+    position: absolute;
+    left: 10px;
+}
+
+.carousel-arrow.right {
+    position: absolute;
+    right: 10px;
+}
+
+
+
+
+
+
+
+/* Logo Section */
+.logos-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    margin-left: 7.5vw;
+    background: #fff; /* White background */
+}
+
+/* Logo Container */
+.logo-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1250px;
+    width: 100%;
+}
+
+/* Logo Style */
+.logo {
+    width: 100%;
+    max-width: 150px;
+    transition: filter 0.2s ease;
+    filter: brightness(0); /* Black logos */
+}
+
+/* Hover Effect */
+.logo:hover {
+    filter: brightness(1) sepia(1) saturate(10000%) hue-rotate(-30deg); /* Orange effect */
+}
+
+/* Responsive Adjustments for logos*/
+@media (max-width: 768px) {
+    .logo-container {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    }
+}
+
+
+
+
+
+/* === Location Section === */
+.location {
+    display: flex;
+    justify-content: center;
+    padding: 10px 80px;
+    padding-bottom: 50px;
+}
+
+/* === Container with Max Width on Large Screens === */
+.location-container {
+    display: flex;
+    max-width: 1700px;
+    width: 100%;
+    gap: 0;
+}
+
+/* === Text Section === */
+.location-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    color: white;
+    padding: 40px;
+    flex: 1;
+    text-align: center;
+}
+
+/* === Map Section === */
+.location-map {
+    flex: 1;
+    height: 300px;
+    background: #ccc;
+}
+
+/* === Mobile Responsiveness === */
+@media (max-width: 768px) {
+    .location {
+        padding: 0;
+    }
+
+    .location-container {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+    }
+
+    .location-text {
+        width: 100%;
+        padding: 10px 40px;
+        font-size: 1.2rem;
+        background: black;
+        color: white;
+    }
+
+    .location-map {
+        width: 100%;
+        height: 150; /* Make the height equal to the viewport width for a square */
+        padding-bottom: 20px;
+    }
+}
+
+
+
+
+/* === Contact Section === */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    padding: 10px 80px;
+}
+
+/* === Contact Container === */
+.contact-container {
+    display: flex;
+    max-width: 1700px;
+    width: 100%;
+    gap: 20px;
+}
+
+/* === Contact Text Block === */
+.contact-text {
+    flex: 1;
+    background: white;
+    color: black;
+    padding: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-text h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.contact-text p {
+    font-size: 1.2rem;
+    max-width: 400px;
+}
+
+/* === Form Section === */
+.contact-form {
+    flex: 1;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .contact-text {
+        background: none;
+        color: black;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* Footer Styling */
+.footer {
+    background: black;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+  }
+  
+/* Container */
+.footer-container {
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+max-width: 1700px;
+margin: 0 auto;
+width: 100%;
+padding: 0 10px;
+gap: 20px;
+}
+
+/* Links and Social Media Sections */
+.footer-links {
+flex: 1;
+text-align: left;
+}
+
+.footer-social {
+flex: 1;
+text-align: right;
+}
+
+/* Divider */
+.footer-divider {
+width: 1px;
+background: #fff;
+display: block;
+}
+
+/* Footer Headings */
+.footer h3 {
+margin-bottom: 10px;
+font-size: 1.2rem;
+}
+
+/* Footer Lists */
+.footer ul {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.footer li {
+margin-bottom: 8px;
+}
+
+/* Footer Links */
+.footer a {
+color: #fff;
+text-decoration: none;
+transition: color 0.2s ease;
+}
+
+.footer a:hover {
+color: #f48fb1;
+}
+
+/* Back to Top Button */
+.back-to-top {
+position: fixed;
+bottom: 20px;
+right: 20px;
+background: #f48fb1;
+color: white;
+border: none;
+border-radius: 50%;
+width: 40px;
+height: 40px;
+font-size: 24px;
+cursor: pointer;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+transition: background 0.2s;
+display: none;
+}
+
+.back-to-top:hover {
+background: #ff4081;
+}
+
+
+
+/* Scroll Down Button */
+.scroll-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    animation: bounce 1.5s infinite;
+    cursor: pointer;
+}
+
+/* Scroll Animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(-50%);
+    }
+    40% {
+        transform: translateY(-10px) translateX(-50%);
+    }
+    60% {
+        transform: translateY(-5px) translateX(-50%);
+    }
+}
+
+.carousel-slide img {
+    max-height: 200px;
+}
+

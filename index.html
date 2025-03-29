@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alvin Kiiru - Digital CV</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="menu-overlay"></div>
+    <header class="header" id = "header">
+        <!-- Opacity Layer -->
+        <div class="opacity-layer"></div>
+
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+          <button class="menu-btn" onclick="toggleMenu()">☰</button>
+          <ul class="nav-links">
+              <button class="close-btn" onclick="toggleMenu()">✕</button>
+              <li><a href="work.html">Work</a></li>
+              <li><a href="education.html">Education</a></li>
+              <li><a href="skills.html">Skills</a></li>
+              <li><a href="public engagements.html">Public Engagements</a></li>
+              <li><a href="#contact">Contact</a></li>
+          </ul>
+      </nav>
+        <!-- Header Content -->
+        <div class="header-content">
+            <h1>Alvin Kiiru</h1>
+            <h2>Operations Manager</h2>
+        </div>
+
+        <!-- Scroll Down Button -->
+        <div class="bottom">
+            <a href="#about-me">
+            <div class="mouse-icon">
+                <div class="scroll">
+                </div>
+            </div></a>
+        </div>
+
+    </header>
+
+    <!-- Work Section -->
+  <section id="about-me" class="about-me">
+      <h2>About Me</h2>
+      <p>
+          I am an experienced Operations Manager at Nikola Energy, passionate about driving innovation in the climate industry. My hobbies include exploring new technologies, traveling, and engaging in public speaking.
+      </p>
+  
+      <div class="carousel">
+        <button class="carousel-arrow left" onclick="moveSlide(-1)">&#10094;</button>
+          <div class="carousel-container">
+              <!-- Slide 1 -->
+              <div class="carousel-slide">
+                  <img src="images/NE.jpg" alt="Nikola Energy Work">
+                  <div class="carousel-text">
+                      <a href="https://www.nikolaenergy.co.ke/" target="_blank" class="carousel-title">Operations Manager</a>
+                      <p>Nikola Energy</p>
+                      <p>Climate Action</p>
+                      <p>Responsible Consumption and Production</p>
+                  </div>
+              </div>
+  
+              <!-- Slide 2 -->
+              <div class="carousel-slide">
+                  <img src="images/HRWK.jpg" alt="Another Project">
+                  <div class="carousel-text">
+                      <a href="https://hrwk.org/" target="_blank" class="carousel-title">Board Member</a>
+                      <p>Hope For Rural Widows Kenya</p>
+                      <p>No Poverty</p>
+                      <p>Peace, Justice and Strong Institutions</p>
+                  </div>
+              </div>
+  
+              <!-- Slide 3 -->
+              <div class="carousel-slide">
+                  <img src="images/AV.jpg" alt="Sustainability Project">
+                  <div class="carousel-text">
+                      <a href="https://hrwk.org/" target="_blank" class="carousel-title">Organization Lead</a>
+                      <p>AV Youth CBO </p>
+                      <p> No Poverty </p>
+                      <p>Decent Work and Economic Growth</p>
+                  </div>
+              </div>
+
+              <!-- Slide 4 -->
+              <div class="carousel-slide">
+                <img src="images/MC.jpg" alt="Another Project">
+                <div class="carousel-text">
+                    <a href="https://www.metiscollective.org/meet-metis" target="_blank" class="carousel-title">Community Manager</a>
+                    <p>Metis Collective</p>
+                    <p>Reduced Inequalities</p>
+                    <p>Climate Change</p>
+                </div>
+            </div>
+
+            <!-- Slide 5 -->
+              <div class="carousel-slide">
+                <img src="images/SP.jpg" alt="Another Project">
+                <div class="carousel-text">
+                    <a href="https://siliconpropertieske.com/" target="_blank" class="carousel-title">Marketing Manager</a>
+                    <p>Silicon Properties Kenya</p>
+                    <p>Industry, Innovation and Infrastructure</p>
+                    <p>--</p>
+                </div>
+            </div>
+
+            <!-- Slide 6 -->
+            <div class="carousel-slide">
+                <img src="images/BMI.jpg" alt="Another Project">
+                <div class="carousel-text">
+                    <a href="https://www.aku.edu/bmi/Pages/home.aspx" target="_blank" class="carousel-title">Mental Health Ambassador</a>
+                    <p>The Brain and Mind Institute</p>
+                    <p>Good Health and Wellbeing</p>
+                    <p>--</p>
+                </div>
+            </div>
+                    
+          </div>
+          <button class="carousel-arrow right" onclick="moveSlide(1)">&#10095;</button>
+      </div>
+  </section>
+
+  <section class="logos-section">
+    <div class="logo-container">
+        <img src="images/Silicon Properties.png" alt="Logo 1" class="logo">
+        <img src="images/HRWK LOGO.png" alt="Logo 2" class="logo">
+        <img src="images/Nikola.png" alt="Logo 3" class="logo">
+        <img src="images/Metis.png" alt="Logo 4" class="logo">
+        <img src="images/aventus.png" alt="Logo 5" class="logo">
+        <img src="images/KNBS.png" alt="Logo 6" class="logo">
+        <img src="images/2023-09-12 00_53_17-brain and mind institute logo - Google Search and 2 more pages - Side Hustles -.png" alt="Logo 6" class="logo">
+        <img src="images/Zulipilots.png" alt="Logo 6" class="logo">
+    </div>
+</section>
+
+<section id="location" class="location">
+    <div class="location-container">
+      <div class="location-text">
+        <h2>Where I’m Based</h2>
+      </div>
+      <div class="location-map">
+        <iframe
+          src="https://www.google.com/maps/d/embed?mid=1X4KLIF3k3dcQPuG0GMNZK6Cz9WK-VIY&ehbc=2E312F"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <div class="contact-container">
+        <!-- Contact Block -->
+        <div class="contact-text">
+            <h2>Contact Me</h2>
+            <p>Reach out to me by filling in this form, and I'll message back as soon as I can.</p>
+        </div>
+
+        <!-- Embedded Google Form -->
+        <div class="contact-form" id = "contact">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSezCS9gslzL9w0L1RUIh_o3VVInvpahh8GKxRkwrx97612CoA/viewform?embedded=true" width="100%" height="400" frameborder="0" marginheight="0" marginwidth="0" allowfullscreen>Loading…" </iframe>
+        </div>
+    </div>
+</section>
+
+    
+    <footer class="footer">
+        <div class="footer-container">
+          <!-- Links Section -->
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#header">Back to Top</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="public engagements.html">Engagements</a></li>
+            </ul>
+          </div>
+      
+          <!-- Divider -->
+          <div class="footer-divider"></div>
+      
+          <!-- Social Media Section -->
+          <div class="footer-social">
+            <h3>Connect</h3>
+            <ul>
+              <li><a href="https://www.instagram.com/yourname" target="_blank">Medium</a></li>
+              <li><a href="https://www.linkedin.com/in/yourname" target="_blank">LinkedIn</a></li>
+              <li><a href="https://twitter.com/yourname" target="_blank">Facebook</a></li>
+              <li><a href="https://www.instagram.com/yourname" target="_blank">Work Instagram</a></li>
+              <li><a href="https://www.instagram.com/yourname" target="_blank">Hobby Instagram</a></li>
+            </ul>
+            <p>&copy; <span id="current-year"></span> 2025 Alvin Kiiru <br>All Rights Reserved</p>
+          </div>
+        </div>
+      
+        <!-- Back to Top Button -->
+        <button class="back-to-top" onclick="scrollToTop()">↑</button>
+      </footer>
+      
+    <script src="script.js"></script>
+
+</body>
+</html>
