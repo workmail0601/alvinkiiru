@@ -208,6 +208,7 @@ html {
 
 
 
+
 /* Footer Styling */
 .footer {
     background: black;
@@ -224,7 +225,7 @@ justify-content: space-between;
 align-items: flex-start;
 max-width: 1700px;
 margin: 0 auto;
-width: 100%;
+width: 95%;
 padding: 0 10px;
 gap: 20px;
 }
@@ -251,6 +252,7 @@ display: block;
 .footer h3 {
 margin-bottom: 10px;
 font-size: 1.2rem;
+color: orange;
 }
 
 /* Footer Lists */
@@ -336,4 +338,3 @@ background: #ff4081;
 .carousel-slide img {
     max-height: 200px;
 }
-
