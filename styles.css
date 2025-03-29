@@ -8,6 +8,7 @@
  /*smooth scroll*/
 html {
     scroll-behavior: smooth;
+    background-color: black;
 }
 
 /* Fullscreen Header */
@@ -302,7 +303,7 @@ to {
 
 /* Title Link */
 .carousel-title {
-    color: white;
+    color: orange;
     font-size: 1rem;
     font-weight: bold;
     text-decoration: none;
@@ -310,7 +311,7 @@ to {
 }
 
 .carousel-title:hover {
-    color: orange;
+    color: white;
 }
 
 /* Responsive Design for About Me */
@@ -382,7 +383,7 @@ to {
     align-items: center;
     padding: 40px 20px;
     margin-left: 7.5vw;
-    background: #fff; /* White background */
+    background: black; /* Black background */
 }
 
 /* Logo Container */
@@ -391,6 +392,7 @@ to {
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     max-width: 1250px;
+    margin-bottom: 85px;
     width: 100%;
 }
 
@@ -399,7 +401,7 @@ to {
     width: 100%;
     max-width: 150px;
     transition: filter 0.2s ease;
-    filter: brightness(0); /* Black logos */
+    filter: brightness(100); /* Black logos */
 }
 
 /* Hover Effect */
@@ -410,7 +412,8 @@ to {
 /* Responsive Adjustments for logos*/
 @media (max-width: 768px) {
     .logo-container {
-        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        grid-template-columns: repeat(2, minmax(80px, 1fr));
+        margin-right: 25px;
     }
 }
 
@@ -424,6 +427,7 @@ to {
     justify-content: center;
     padding: 10px 80px;
     padding-bottom: 50px;
+    margin-bottom: 85px;
 }
 
 /* === Container with Max Width on Large Screens === */
@@ -446,11 +450,16 @@ to {
     text-align: center;
 }
 
+.location-text h2{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
 /* === Map Section === */
 .location-map {
     flex: 1;
     height: 300px;
-    background: #ccc;
+    background: black;
 }
 
 /* === Mobile Responsiveness === */
@@ -501,8 +510,8 @@ to {
 /* === Contact Text Block === */
 .contact-text {
     flex: 1;
-    background: white;
-    color: black;
+    background: black;
+    color: white;
     padding: 50px;
     text-align: center;
     display: flex;
@@ -535,7 +544,6 @@ to {
 
     .contact-text {
         background: none;
-        color: black;
     }
 }
 
@@ -591,6 +599,7 @@ display: block;
 .footer h3 {
 margin-bottom: 10px;
 font-size: 1.2rem;
+color: orange;
 }
 
 /* Footer Lists */
