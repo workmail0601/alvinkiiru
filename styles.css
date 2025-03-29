@@ -540,6 +540,7 @@ to {
     .contact-container {
         flex-direction: column;
         gap: 0px;
+        width: 250px;
     }
 
     .contact-text {
